@@ -1,0 +1,6 @@
+framework module Pods_Instapict {
+  umbrella header "Pods-Instapict-umbrella.h"
+
+  export *
+  module * { export * }
+}

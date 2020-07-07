@@ -1,0 +1,6 @@
+framework module Pods_Instapict_InstapictUITests {
+  umbrella header "Pods-Instapict-InstapictUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
