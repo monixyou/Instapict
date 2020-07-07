@@ -3,19 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		143CE02924B3E52800900D2F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 143CE02824B3E52800900D2F /* AppDelegate.m */; };
 		143CE02C24B3E52800900D2F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 143CE02B24B3E52800900D2F /* SceneDelegate.m */; };
-		143CE02F24B3E52800900D2F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 143CE02E24B3E52800900D2F /* ViewController.m */; };
 		143CE03224B3E52800900D2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 143CE03024B3E52800900D2F /* Main.storyboard */; };
 		143CE03424B3E52900900D2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 143CE03324B3E52900900D2F /* Assets.xcassets */; };
 		143CE03724B3E52900900D2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 143CE03524B3E52900900D2F /* LaunchScreen.storyboard */; };
 		143CE03A24B3E52900900D2F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 143CE03924B3E52900900D2F /* main.m */; };
 		143CE04424B3E52900900D2F /* InstapictTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 143CE04324B3E52900900D2F /* InstapictTests.m */; };
 		143CE04F24B3E52900900D2F /* InstapictUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 143CE04E24B3E52900900D2F /* InstapictUITests.m */; };
+		14D2450024B523210007FEF9 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D244FF24B523210007FEF9 /* LoginViewController.m */; };
+		14D2450324B527010007FEF9 /* TimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D2450224B527010007FEF9 /* TimelineViewController.m */; };
 		2DD5F03ADBABF60F0F69D849 /* Pods_Instapict_InstapictUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9AFE2377A340C7C6648E839 /* Pods_Instapict_InstapictUITests.framework */; };
 		7B8461566F8C3D51DD5443D6 /* Pods_Instapict.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B06506100BDFA844FD447530 /* Pods_Instapict.framework */; };
 		E466A9DC42461F2E4B403C40 /* Pods_InstapictTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B26023F62CC7796E4494F632 /* Pods_InstapictTests.framework */; };
@@ -45,8 +46,6 @@
 		143CE02824B3E52800900D2F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		143CE02A24B3E52800900D2F /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		143CE02B24B3E52800900D2F /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		143CE02D24B3E52800900D2F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		143CE02E24B3E52800900D2F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		143CE03124B3E52800900D2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		143CE03324B3E52900900D2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		143CE03624B3E52900900D2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,6 +57,10 @@
 		143CE04A24B3E52900900D2F /* InstapictUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstapictUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		143CE04E24B3E52900900D2F /* InstapictUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstapictUITests.m; sourceTree = "<group>"; };
 		143CE05024B3E52900900D2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14D244FE24B523210007FEF9 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		14D244FF24B523210007FEF9 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		14D2450124B527010007FEF9 /* TimelineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimelineViewController.h; sourceTree = "<group>"; };
+		14D2450224B527010007FEF9 /* TimelineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimelineViewController.m; sourceTree = "<group>"; };
 		219A721EA59B4E1843F5E92B /* Pods-Instapict-InstapictUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instapict-InstapictUITests.release.xcconfig"; path = "Target Support Files/Pods-Instapict-InstapictUITests/Pods-Instapict-InstapictUITests.release.xcconfig"; sourceTree = "<group>"; };
 		25CC6F93AFE0F884363C46B0 /* Pods-Instapict.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instapict.debug.xcconfig"; path = "Target Support Files/Pods-Instapict/Pods-Instapict.debug.xcconfig"; sourceTree = "<group>"; };
 		3CF16935A18841DCF7EE1DE7 /* Pods-Instapict-InstapictUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instapict-InstapictUITests.debug.xcconfig"; path = "Target Support Files/Pods-Instapict-InstapictUITests/Pods-Instapict-InstapictUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -121,12 +124,13 @@
 		143CE02624B3E52800900D2F /* Instapict */ = {
 			isa = PBXGroup;
 			children = (
+				14D244FD24B522230007FEF9 /* Models */,
+				14D244FC24B5221D0007FEF9 /* Views */,
+				14D244FB24B522110007FEF9 /* View Controllers */,
 				143CE02724B3E52800900D2F /* AppDelegate.h */,
 				143CE02824B3E52800900D2F /* AppDelegate.m */,
 				143CE02A24B3E52800900D2F /* SceneDelegate.h */,
 				143CE02B24B3E52800900D2F /* SceneDelegate.m */,
-				143CE02D24B3E52800900D2F /* ViewController.h */,
-				143CE02E24B3E52800900D2F /* ViewController.m */,
 				143CE03024B3E52800900D2F /* Main.storyboard */,
 				143CE03324B3E52900900D2F /* Assets.xcassets */,
 				143CE03524B3E52900900D2F /* LaunchScreen.storyboard */,
@@ -154,6 +158,31 @@
 			path = InstapictUITests;
 			sourceTree = "<group>";
 		};
+		14D244FB24B522110007FEF9 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				14D244FE24B523210007FEF9 /* LoginViewController.h */,
+				14D244FF24B523210007FEF9 /* LoginViewController.m */,
+				14D2450124B527010007FEF9 /* TimelineViewController.h */,
+				14D2450224B527010007FEF9 /* TimelineViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		14D244FC24B5221D0007FEF9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		14D244FD24B522230007FEF9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		4729375231D77D854BC4FF9C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,7 +193,6 @@
 				A6B3272DC479BC9814CFF188 /* Pods-InstapictTests.debug.xcconfig */,
 				039EF7835B7848C81906DA7F /* Pods-InstapictTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -416,10 +444,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				143CE02F24B3E52800900D2F /* ViewController.m in Sources */,
+				14D2450024B523210007FEF9 /* LoginViewController.m in Sources */,
 				143CE02924B3E52800900D2F /* AppDelegate.m in Sources */,
 				143CE03A24B3E52900900D2F /* main.m in Sources */,
 				143CE02C24B3E52800900D2F /* SceneDelegate.m in Sources */,
+				14D2450324B527010007FEF9 /* TimelineViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
