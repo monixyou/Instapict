@@ -16,6 +16,9 @@
 		143CE03A24B3E52900900D2F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 143CE03924B3E52900900D2F /* main.m */; };
 		143CE04424B3E52900900D2F /* InstapictTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 143CE04324B3E52900900D2F /* InstapictTests.m */; };
 		143CE04F24B3E52900900D2F /* InstapictUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 143CE04E24B3E52900900D2F /* InstapictUITests.m */; };
+		2DD5F03ADBABF60F0F69D849 /* Pods_Instapict_InstapictUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9AFE2377A340C7C6648E839 /* Pods_Instapict_InstapictUITests.framework */; };
+		7B8461566F8C3D51DD5443D6 /* Pods_Instapict.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B06506100BDFA844FD447530 /* Pods_Instapict.framework */; };
+		E466A9DC42461F2E4B403C40 /* Pods_InstapictTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B26023F62CC7796E4494F632 /* Pods_InstapictTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		039EF7835B7848C81906DA7F /* Pods-InstapictTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstapictTests.release.xcconfig"; path = "Target Support Files/Pods-InstapictTests/Pods-InstapictTests.release.xcconfig"; sourceTree = "<group>"; };
 		143CE02424B3E52800900D2F /* Instapict.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instapict.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		143CE02724B3E52800900D2F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		143CE02824B3E52800900D2F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -54,6 +58,14 @@
 		143CE04A24B3E52900900D2F /* InstapictUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstapictUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		143CE04E24B3E52900900D2F /* InstapictUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstapictUITests.m; sourceTree = "<group>"; };
 		143CE05024B3E52900900D2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		219A721EA59B4E1843F5E92B /* Pods-Instapict-InstapictUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instapict-InstapictUITests.release.xcconfig"; path = "Target Support Files/Pods-Instapict-InstapictUITests/Pods-Instapict-InstapictUITests.release.xcconfig"; sourceTree = "<group>"; };
+		25CC6F93AFE0F884363C46B0 /* Pods-Instapict.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instapict.debug.xcconfig"; path = "Target Support Files/Pods-Instapict/Pods-Instapict.debug.xcconfig"; sourceTree = "<group>"; };
+		3CF16935A18841DCF7EE1DE7 /* Pods-Instapict-InstapictUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instapict-InstapictUITests.debug.xcconfig"; path = "Target Support Files/Pods-Instapict-InstapictUITests/Pods-Instapict-InstapictUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A6B3272DC479BC9814CFF188 /* Pods-InstapictTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstapictTests.debug.xcconfig"; path = "Target Support Files/Pods-InstapictTests/Pods-InstapictTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B06506100BDFA844FD447530 /* Pods_Instapict.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instapict.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B26023F62CC7796E4494F632 /* Pods_InstapictTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstapictTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9AFE2377A340C7C6648E839 /* Pods_Instapict_InstapictUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instapict_InstapictUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD379C9A33E7961205A45ACA /* Pods-Instapict.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instapict.release.xcconfig"; path = "Target Support Files/Pods-Instapict/Pods-Instapict.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B8461566F8C3D51DD5443D6 /* Pods_Instapict.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E466A9DC42461F2E4B403C40 /* Pods_InstapictTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DD5F03ADBABF60F0F69D849 /* Pods_Instapict_InstapictUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +103,8 @@
 				143CE04224B3E52900900D2F /* InstapictTests */,
 				143CE04D24B3E52900900D2F /* InstapictUITests */,
 				143CE02524B3E52800900D2F /* Products */,
+				4729375231D77D854BC4FF9C /* Pods */,
+				D65BC5BF1EC8D7D789AE3814 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,6 +154,30 @@
 			path = InstapictUITests;
 			sourceTree = "<group>";
 		};
+		4729375231D77D854BC4FF9C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				25CC6F93AFE0F884363C46B0 /* Pods-Instapict.debug.xcconfig */,
+				DD379C9A33E7961205A45ACA /* Pods-Instapict.release.xcconfig */,
+				3CF16935A18841DCF7EE1DE7 /* Pods-Instapict-InstapictUITests.debug.xcconfig */,
+				219A721EA59B4E1843F5E92B /* Pods-Instapict-InstapictUITests.release.xcconfig */,
+				A6B3272DC479BC9814CFF188 /* Pods-InstapictTests.debug.xcconfig */,
+				039EF7835B7848C81906DA7F /* Pods-InstapictTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D65BC5BF1EC8D7D789AE3814 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B06506100BDFA844FD447530 /* Pods_Instapict.framework */,
+				B9AFE2377A340C7C6648E839 /* Pods_Instapict_InstapictUITests.framework */,
+				B26023F62CC7796E4494F632 /* Pods_InstapictTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,9 +185,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 143CE05324B3E52900900D2F /* Build configuration list for PBXNativeTarget "Instapict" */;
 			buildPhases = (
+				FACC4F4ADD9BE970373CC182 /* [CP] Check Pods Manifest.lock */,
 				143CE02024B3E52800900D2F /* Sources */,
 				143CE02124B3E52800900D2F /* Frameworks */,
 				143CE02224B3E52800900D2F /* Resources */,
+				BAE7D7DE61AA8A07AD803DE8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -161,6 +204,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 143CE05624B3E52900900D2F /* Build configuration list for PBXNativeTarget "InstapictTests" */;
 			buildPhases = (
+				61DCC00457E77F2604A6AC34 /* [CP] Check Pods Manifest.lock */,
 				143CE03B24B3E52900900D2F /* Sources */,
 				143CE03C24B3E52900900D2F /* Frameworks */,
 				143CE03D24B3E52900900D2F /* Resources */,
@@ -179,9 +223,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 143CE05924B3E52900900D2F /* Build configuration list for PBXNativeTarget "InstapictUITests" */;
 			buildPhases = (
+				39C6075FA49A067025294AD3 /* [CP] Check Pods Manifest.lock */,
 				143CE04624B3E52900900D2F /* Sources */,
 				143CE04724B3E52900900D2F /* Frameworks */,
 				143CE04824B3E52900900D2F /* Resources */,
+				8CC9D5F67A6DEB9CE58C2B57 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -261,6 +307,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		39C6075FA49A067025294AD3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Instapict-InstapictUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		61DCC00457E77F2604A6AC34 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InstapictTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CC9D5F67A6DEB9CE58C2B57 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Instapict-InstapictUITests/Pods-Instapict-InstapictUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Instapict-InstapictUITests/Pods-Instapict-InstapictUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Instapict-InstapictUITests/Pods-Instapict-InstapictUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAE7D7DE61AA8A07AD803DE8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Instapict/Pods-Instapict-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Instapict/Pods-Instapict-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Instapict/Pods-Instapict-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FACC4F4ADD9BE970373CC182 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Instapict-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		143CE02024B3E52800900D2F /* Sources */ = {
@@ -437,6 +586,7 @@
 		};
 		143CE05424B3E52900900D2F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25CC6F93AFE0F884363C46B0 /* Pods-Instapict.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -454,6 +604,7 @@
 		};
 		143CE05524B3E52900900D2F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD379C9A33E7961205A45ACA /* Pods-Instapict.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -471,6 +622,7 @@
 		};
 		143CE05724B3E52900900D2F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6B3272DC479BC9814CFF188 /* Pods-InstapictTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -491,6 +643,7 @@
 		};
 		143CE05824B3E52900900D2F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 039EF7835B7848C81906DA7F /* Pods-InstapictTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -511,6 +664,7 @@
 		};
 		143CE05A24B3E52900900D2F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CF16935A18841DCF7EE1DE7 /* Pods-Instapict-InstapictUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2P5RKMXDPK;
@@ -529,6 +683,7 @@
 		};
 		143CE05B24B3E52900900D2F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 219A721EA59B4E1843F5E92B /* Pods-Instapict-InstapictUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2P5RKMXDPK;
