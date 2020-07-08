@@ -28,8 +28,8 @@
 
         // Load Chat view controller and set as root view controller
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        UIViewController *timelineNavigationController = [storyboard instantiateViewControllerWithIdentifier:@"TimelineNavigationController"];
-        self.window.rootViewController = timelineNavigationController;
+        UIViewController *tabBarController = [storyboard instantiateViewControllerWithIdentifier:@"TabBarController"];
+        self.window.rootViewController = tabBarController;
     }
 }
 
