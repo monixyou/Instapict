@@ -24,6 +24,7 @@
 }
 
 - (IBAction)didTapLogin:(id)sender {
+    __weak __typeof(self) weakSelf = self;
     
     NSString *username = self.usernameField.text;
     NSString *password = self.passwordField.text;
@@ -33,12 +34,13 @@
             NSLog(@"User log in failed: %@", error.localizedDescription);
         } else {
             NSLog(@"User logged in successfully with username: %@", user[@"username"]);
-            [self performSegueWithIdentifier:@"loginSegue" sender:nil];
+            [weakSelf performSegueWithIdentifier:@"loginSegue" sender:nil];
         }
     }];
 }
 
 - (IBAction)didTapSignUp:(id)sender {
+    __weak __typeof(self) weakSelf = self;
     
     PFUser *newUser = [PFUser user];
     newUser.username = self.usernameField.text;
@@ -49,7 +51,7 @@
             NSLog(@"Error: %@", error.localizedDescription);
         } else {
             NSLog(@"User registered successfully with username: %@", newUser[@"username"]);
-            [self performSegueWithIdentifier:@"loginSegue" sender:nil];
+            [weakSelf performSegueWithIdentifier:@"loginSegue" sender:nil];
         }
     }];
 }
