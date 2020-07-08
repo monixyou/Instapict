@@ -73,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="683" y="-652"/>
+            <point key="canvasLocation" x="258" y="-660"/>
         </scene>
         <!--Timeline View Controller-->
         <scene sceneID="YAj-gl-phj">
@@ -97,11 +97,37 @@
             </objects>
             <point key="canvasLocation" x="-313" y="1593"/>
         </scene>
-        <!--Item-->
+        <!--New Post View Controller-->
+        <scene sceneID="iDu-i8-T6l">
+            <objects>
+                <viewController id="5f7-XP-IPJ" customClass="NewPostViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rmB-Ld-575">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ht0-9L-5Ub">
+                                <rect key="frame" x="180" y="406" width="54" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="didTapCamera:" destination="5f7-XP-IPJ" eventType="touchUpInside" id="zY4-VU-eqc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="3vC-YX-3DK"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="akn-9p-6if"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pzy-6q-IsW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="848" y="1592"/>
+        </scene>
+        <!--Home-->
         <scene sceneID="k2v-ZZ-F4w">
             <objects>
                 <navigationController storyboardIdentifier="TimelineNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="cI1-RO-8pF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="rKg-HY-u0Q"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="feed_tab" id="rKg-HY-u0Q"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="N9g-9o-ibB"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VgO-Y2-QPS">
@@ -128,11 +154,35 @@
                     </tabBar>
                     <connections>
                         <segue destination="cI1-RO-8pF" kind="relationship" relationship="viewControllers" id="ir8-UU-Xmh"/>
+                        <segue destination="upp-Ir-Yjy" kind="relationship" relationship="viewControllers" id="9SW-Ah-QaK"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xVg-1i-6GP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="683" y="113"/>
+            <point key="canvasLocation" x="259" y="111"/>
+        </scene>
+        <!--New Post-->
+        <scene sceneID="FHR-4V-Km4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="upp-Ir-Yjy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="New Post" image="plus.square" catalog="system" id="SgG-gZ-muV"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EhB-gq-59t">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5f7-XP-IPJ" kind="relationship" relationship="rootViewController" id="Fml-yx-2Pg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QW0-uO-zyy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="849" y="842"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="feed_tab" width="25" height="25"/>
+        <image name="plus.square" catalog="system" width="128" height="114"/>
+    </resources>
 </document>

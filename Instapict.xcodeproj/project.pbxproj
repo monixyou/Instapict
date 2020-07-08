@@ -17,6 +17,7 @@
 		143CE04F24B3E52900900D2F /* InstapictUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 143CE04E24B3E52900900D2F /* InstapictUITests.m */; };
 		14D2450024B523210007FEF9 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D244FF24B523210007FEF9 /* LoginViewController.m */; };
 		14D2450324B527010007FEF9 /* TimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D2450224B527010007FEF9 /* TimelineViewController.m */; };
+		14D2450624B58ADC0007FEF9 /* NewPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D2450524B58ADC0007FEF9 /* NewPostViewController.m */; };
 		2DD5F03ADBABF60F0F69D849 /* Pods_Instapict_InstapictUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9AFE2377A340C7C6648E839 /* Pods_Instapict_InstapictUITests.framework */; };
 		7B8461566F8C3D51DD5443D6 /* Pods_Instapict.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B06506100BDFA844FD447530 /* Pods_Instapict.framework */; };
 		E466A9DC42461F2E4B403C40 /* Pods_InstapictTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B26023F62CC7796E4494F632 /* Pods_InstapictTests.framework */; };
@@ -61,6 +62,8 @@
 		14D244FF24B523210007FEF9 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		14D2450124B527010007FEF9 /* TimelineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimelineViewController.h; sourceTree = "<group>"; };
 		14D2450224B527010007FEF9 /* TimelineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimelineViewController.m; sourceTree = "<group>"; };
+		14D2450424B58ADC0007FEF9 /* NewPostViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewPostViewController.h; sourceTree = "<group>"; };
+		14D2450524B58ADC0007FEF9 /* NewPostViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewPostViewController.m; sourceTree = "<group>"; };
 		219A721EA59B4E1843F5E92B /* Pods-Instapict-InstapictUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instapict-InstapictUITests.release.xcconfig"; path = "Target Support Files/Pods-Instapict-InstapictUITests/Pods-Instapict-InstapictUITests.release.xcconfig"; sourceTree = "<group>"; };
 		25CC6F93AFE0F884363C46B0 /* Pods-Instapict.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instapict.debug.xcconfig"; path = "Target Support Files/Pods-Instapict/Pods-Instapict.debug.xcconfig"; sourceTree = "<group>"; };
 		3CF16935A18841DCF7EE1DE7 /* Pods-Instapict-InstapictUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instapict-InstapictUITests.debug.xcconfig"; path = "Target Support Files/Pods-Instapict-InstapictUITests/Pods-Instapict-InstapictUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -165,6 +168,8 @@
 				14D244FF24B523210007FEF9 /* LoginViewController.m */,
 				14D2450124B527010007FEF9 /* TimelineViewController.h */,
 				14D2450224B527010007FEF9 /* TimelineViewController.m */,
+				14D2450424B58ADC0007FEF9 /* NewPostViewController.h */,
+				14D2450524B58ADC0007FEF9 /* NewPostViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -447,6 +452,7 @@
 				14D2450024B523210007FEF9 /* LoginViewController.m in Sources */,
 				143CE02924B3E52800900D2F /* AppDelegate.m in Sources */,
 				143CE03A24B3E52900900D2F /* main.m in Sources */,
+				14D2450624B58ADC0007FEF9 /* NewPostViewController.m in Sources */,
 				143CE02C24B3E52800900D2F /* SceneDelegate.m in Sources */,
 				14D2450324B527010007FEF9 /* TimelineViewController.m in Sources */,
 			);
