@@ -82,6 +82,36 @@
                     <view key="view" contentMode="scaleToFill" id="TPO-27-rAY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GB2-uY-Ayy">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="433" id="yRP-WI-ged">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="433"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yRP-WI-ged" id="dhk-5I-GXg">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="433"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d47-gB-0Il">
+                                                    <rect key="frame" x="57" y="11" width="300" height="300"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Caption label here" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bk0-Nf-J8A">
+                                                    <rect key="frame" x="39" y="335" width="337" height="71"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="8X1-UP-3mM"/>
                     </view>
@@ -95,7 +125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LCG-g2-Jcw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-313" y="1593"/>
+            <point key="canvasLocation" x="-313.04347826086956" y="1592.4107142857142"/>
         </scene>
         <!--New Post View Controller-->
         <scene sceneID="iDu-i8-T6l">
@@ -106,11 +136,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ht0-9L-5Ub">
-                                <rect key="frame" x="180" y="406" width="54" height="30"/>
+                                <rect key="frame" x="32" y="505" width="54" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Camera"/>
                                 <connections>
                                     <action selector="didTapCamera:" destination="5f7-XP-IPJ" eventType="touchUpInside" id="zY4-VU-eqc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nnL-0H-du5">
+                                <rect key="frame" x="293" y="505" width="89" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Photo Album"/>
+                                <connections>
+                                    <action selector="didTapPhotoAlbum:" destination="5f7-XP-IPJ" eventType="touchUpInside" id="Zqf-WH-tzy"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G2J-mC-HMf">
+                                <rect key="frame" x="32" y="138" width="350" height="350"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Caption here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Tli-Ck-ZZZ">
+                                <rect key="frame" x="32" y="543" width="350" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Euk-WJ-Ze6">
+                                <rect key="frame" x="187" y="699" width="40" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Share"/>
+                                <connections>
+                                    <action selector="didTapShare:" destination="5f7-XP-IPJ" eventType="touchUpInside" id="dLp-0E-w6i"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -118,10 +176,14 @@
                         <viewLayoutGuide key="safeArea" id="3vC-YX-3DK"/>
                     </view>
                     <navigationItem key="navigationItem" id="akn-9p-6if"/>
+                    <connections>
+                        <outlet property="captionTextView" destination="Tli-Ck-ZZZ" id="Jln-cb-CWK"/>
+                        <outlet property="postPhoto" destination="G2J-mC-HMf" id="bDC-nl-UeM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pzy-6q-IsW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="848" y="1592"/>
+            <point key="canvasLocation" x="847.82608695652175" y="1591.7410714285713"/>
         </scene>
         <!--Home-->
         <scene sceneID="k2v-ZZ-F4w">

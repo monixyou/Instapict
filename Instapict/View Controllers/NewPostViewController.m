@@ -9,8 +9,10 @@
 #import "NewPostViewController.h"
 #import <UIKit/UIKit.h>
 
-
 @interface NewPostViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+
+@property (weak, nonatomic) IBOutlet UIImageView *postPhoto;
+@property (weak, nonatomic) IBOutlet UITextView *captionTextView;
 
 @end
 
@@ -19,6 +21,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
+    NSLog(@"%f", screenWidth);
+
 }
 
 - (IBAction)didTapCamera:(id)sender {
@@ -30,14 +36,52 @@
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         
         imagePickerVC.sourceType = UIImagePickerControllerSourceTypeCamera;
-        [self presentViewController:imagePickerVC animated:YES completion:nil];
     }
     else {
-        NSLog(@"Camera 🚫 available so we will use photo library instead");
+        // TODO: change to alert instead
         imagePickerVC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        NSLog(@"Camera 🚫 available so we will use photo library instead");
     }
+    [self presentViewController:imagePickerVC animated:YES completion:nil];
+}
+
+- (IBAction)didTapPhotoAlbum:(id)sender {
+    UIImagePickerController *imagePickerVC = [UIImagePickerController new];
+    imagePickerVC.delegate = self;
+    imagePickerVC.allowsEditing = YES;
+    imagePickerVC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+
+    [self presentViewController:imagePickerVC animated:YES completion:nil];
+}
+
+- (UIImage *)resizeImage:(UIImage *)image withSize:(CGSize)size {
+    UIImageView *resizeImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height)];
     
+    resizeImageView.contentMode = UIViewContentModeScaleAspectFill;
+    resizeImageView.image = image;
     
+    UIGraphicsBeginImageContext(size);
+    [resizeImageView.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return newImage;
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+    
+    UIImage *editedImage = info[UIImagePickerControllerEditedImage];
+    
+    CGSize size = CGSizeMake(self.postPhoto.frame.size.width, self.postPhoto.frame.size.height);
+    UIImage *resizedImage = [self resizeImage:editedImage withSize:size];
+    
+    [self.postPhoto setImage:resizedImage];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)didTapShare:(id)sender {
+
 }
 
 /*
