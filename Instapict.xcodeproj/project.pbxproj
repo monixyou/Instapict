@@ -16,6 +16,7 @@
 		143CE03A24B3E52900900D2F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 143CE03924B3E52900900D2F /* main.m */; };
 		143CE04424B3E52900900D2F /* InstapictTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 143CE04324B3E52900900D2F /* InstapictTests.m */; };
 		143CE04F24B3E52900900D2F /* InstapictUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 143CE04E24B3E52900900D2F /* InstapictUITests.m */; };
+		14B5BD6524B7EA0000F18273 /* PostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B5BD6424B7EA0000F18273 /* PostCell.m */; };
 		14D2450024B523210007FEF9 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D244FF24B523210007FEF9 /* LoginViewController.m */; };
 		14D2450324B527010007FEF9 /* TimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D2450224B527010007FEF9 /* TimelineViewController.m */; };
 		14D2450624B58ADC0007FEF9 /* NewPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D2450524B58ADC0007FEF9 /* NewPostViewController.m */; };
@@ -61,6 +62,8 @@
 		143CE04A24B3E52900900D2F /* InstapictUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstapictUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		143CE04E24B3E52900900D2F /* InstapictUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstapictUITests.m; sourceTree = "<group>"; };
 		143CE05024B3E52900900D2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14B5BD6324B7EA0000F18273 /* PostCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostCell.h; sourceTree = "<group>"; };
+		14B5BD6424B7EA0000F18273 /* PostCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostCell.m; sourceTree = "<group>"; };
 		14D244FE24B523210007FEF9 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		14D244FF24B523210007FEF9 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		14D2450124B527010007FEF9 /* TimelineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimelineViewController.h; sourceTree = "<group>"; };
@@ -117,8 +120,8 @@
 		141B40EA24B6EC8800A6D7D4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				14B5BD6024B7E92C00F18273 /* PostCell.h */,
-				14B5BD6124B7E92C00F18273 /* PostCell.m */,
+				14B5BD6324B7EA0000F18273 /* PostCell.h */,
+				14B5BD6424B7EA0000F18273 /* PostCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 				14D2450024B523210007FEF9 /* LoginViewController.m in Sources */,
 				143CE02924B3E52800900D2F /* AppDelegate.m in Sources */,
 				143CE03A24B3E52900900D2F /* main.m in Sources */,
+				14B5BD6524B7EA0000F18273 /* PostCell.m in Sources */,
 				14D2450624B58ADC0007FEF9 /* NewPostViewController.m in Sources */,
 				143CE02C24B3E52800900D2F /* SceneDelegate.m in Sources */,
 				14D2450324B527010007FEF9 /* TimelineViewController.m in Sources */,

@@ -22,10 +22,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
-    NSLog(@"%f", screenWidth);
-
 }
 
 - (IBAction)didTapCamera:(id)sender {

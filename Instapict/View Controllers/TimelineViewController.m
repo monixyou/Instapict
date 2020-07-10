@@ -9,8 +9,13 @@
 #import "TimelineViewController.h"
 #import <Parse/Parse.h>
 #import "SceneDelegate.h"
+#import "PostCell.h"
 
-@interface TimelineViewController ()
+@interface TimelineViewController () <UITableViewDelegate, UITableViewDataSource>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSMutableArray<Post *> *recentPosts;
+@property (nonatomic, strong) UIRefreshControl *refreshControl;
 
 @end
 
@@ -18,7 +23,33 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
+    [self getRecentPosts];
+    
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(getRecentPosts) forControlEvents:UIControlEventValueChanged];
+    [self.tableView insertSubview:self.refreshControl atIndex:0];
+}
+
+- (void)getRecentPosts {
+    PFQuery *query = [PFQuery queryWithClassName:@"Post"];
+    [query orderByDescending:@"createdAt"];
+    query.limit = 20;
+
+    // fetch data asynchronously
+    [query findObjectsInBackgroundWithBlock:^(NSArray *posts, NSError *error) {
+        if (posts != nil) {
+            // do something with the array of object returned by the call
+            self.recentPosts = [NSMutableArray arrayWithArray:posts];
+            [self.tableView reloadData];
+        } else {
+            NSLog(@"%@", error.localizedDescription);
+        }
+        [self.refreshControl endRefreshing];
+    }];
 }
 
 - (IBAction)didTapLogout:(id)sender {
@@ -38,6 +69,20 @@
     }];
 }
 
+#pragma mark - Table View Delegates
+
+- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.recentPosts.count;
+}
+
+- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    
+    PostCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PostCell"];
+    cell.post = self.recentPosts[indexPath.row];
+    return cell;
+    
+}
+
 /*
 #pragma mark - Navigation
 
@@ -47,5 +92,7 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
 
 @end

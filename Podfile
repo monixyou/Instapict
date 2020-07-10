@@ -7,6 +7,7 @@ target 'Instapict' do
 
   # Pods for Instapict
   pod 'Parse'
+  pod 'Parse/UI'
 
   target 'InstapictTests' do
     inherit! :search_paths
