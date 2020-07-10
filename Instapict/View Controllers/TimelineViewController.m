@@ -10,6 +10,7 @@
 #import <Parse/Parse.h>
 #import "SceneDelegate.h"
 #import "PostCell.h"
+#import "DetailsViewController.h"
 
 @interface TimelineViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -83,15 +84,22 @@
     
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    UITableViewCell *tappedCell = sender;
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:tappedCell];
+    Post *post = self.recentPosts[indexPath.item];
+    
+    DetailsViewController *detailsViewController = [segue destinationViewController];
+    detailsViewController.post = post;
 }
-*/
+
 
 
 
