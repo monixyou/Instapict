@@ -34,6 +34,7 @@
     }];
     
     self.captionLabel.text = post.caption;
+    self.numLikesLabel.text = [NSString stringWithFormat:@"%@", post.likeCount];;
 }
 
 @end
