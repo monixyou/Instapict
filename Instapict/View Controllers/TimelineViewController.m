@@ -41,15 +41,17 @@
     query.limit = 20;
 
     // fetch data asynchronously
+    __weak __typeof(self) weakSelf = self;
     [query findObjectsInBackgroundWithBlock:^(NSArray *posts, NSError *error) {
+        __strong __typeof(self) strongSelf = weakSelf;
         if (posts != nil) {
             // do something with the array of object returned by the call
-            self.recentPosts = [NSMutableArray arrayWithArray:posts];
-            [self.tableView reloadData];
+            strongSelf.recentPosts = [NSMutableArray arrayWithArray:posts];
+            [strongSelf.tableView reloadData];
         } else {
             NSLog(@"%@", error.localizedDescription);
         }
-        [self.refreshControl endRefreshing];
+        [strongSelf.refreshControl endRefreshing];
     }];
 }
 
@@ -77,7 +79,6 @@
 }
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    
     PostCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PostCell"];
     cell.post = self.recentPosts[indexPath.row];
     return cell;

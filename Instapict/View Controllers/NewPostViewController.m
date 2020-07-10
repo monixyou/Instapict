@@ -82,13 +82,14 @@
         // raise alert
     }
     else {
+        __weak __typeof(self) weakSelf = self;
         [Post postUserImage:self.postPhoto.image withCaption:self.captionTextView.text withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
             if (error) {
                 NSLog(@"Error: %@", error.localizedDescription);
             }
             else {
                 NSLog(@"Post successfully shared!");
-                [self resetView];
+                [weakSelf resetView];
             }
         }];
     }

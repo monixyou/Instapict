@@ -14,11 +14,12 @@
 - (void)setPost:(Post *)post {
     _post = post;
     
+    __weak __typeof(self) weakSelf = self;
     [post.image getDataInBackgroundWithBlock:^(NSData * _Nullable data, NSError * _Nullable error) {
         if (error) {
             NSLog(@"Error: %@", error.localizedDescription);
         } else {
-            self.postPicture.image = [UIImage imageWithData:data];
+            weakSelf.postPicture.image = [UIImage imageWithData:data];
         }
     }];
 }

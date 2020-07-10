@@ -46,11 +46,13 @@
     query.limit = 20;
 
     // fetch data asynchronously
+    __weak __typeof(self) weakSelf = self;
     [query findObjectsInBackgroundWithBlock:^(NSArray *posts, NSError *error) {
+        __strong __typeof(self) strongSelf = weakSelf;
         if (posts != nil) {
             // do something with the array of object returned by the call
-            self.recentPosts = [NSMutableArray arrayWithArray:posts];
-            [self.collectionView reloadData];
+            strongSelf.recentPosts = [NSMutableArray arrayWithArray:posts];
+            [strongSelf.collectionView reloadData];
         } else {
             NSLog(@"%@", error.localizedDescription);
         }
