@@ -8,6 +8,7 @@
 
 #import "NewPostViewController.h"
 #import <UIKit/UIKit.h>
+#import "Post.h"
 
 @interface NewPostViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
@@ -81,7 +82,27 @@
 }
 
 - (IBAction)didTapShare:(id)sender {
+    if (self.postPhoto.image == nil) {
+        // raise alert
+    }
+    else {
+        [Post postUserImage:self.postPhoto.image withCaption:self.captionTextView.text withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
+            if (error) {
+                NSLog(@"Error: %@", error.localizedDescription);
+            }
+            else {
+                NSLog(@"Post successfully shared!");
+                [self resetView];
+            }
+        }];
+    }
+    
+    
+}
 
+- (void)resetView {
+    self.postPhoto.image = nil;
+    self.captionTextView.text = @"";
 }
 
 /*

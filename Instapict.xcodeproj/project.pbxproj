@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		141B40ED24B6ECB400A6D7D4 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 141B40EC24B6ECB400A6D7D4 /* Post.m */; };
 		143CE02924B3E52800900D2F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 143CE02824B3E52800900D2F /* AppDelegate.m */; };
 		143CE02C24B3E52800900D2F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 143CE02B24B3E52800900D2F /* SceneDelegate.m */; };
 		143CE03224B3E52800900D2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 143CE03024B3E52800900D2F /* Main.storyboard */; };
@@ -42,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		039EF7835B7848C81906DA7F /* Pods-InstapictTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstapictTests.release.xcconfig"; path = "Target Support Files/Pods-InstapictTests/Pods-InstapictTests.release.xcconfig"; sourceTree = "<group>"; };
+		141B40EB24B6ECB400A6D7D4 /* Post.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
+		141B40EC24B6ECB400A6D7D4 /* Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
 		143CE02424B3E52800900D2F /* Instapict.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instapict.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		143CE02724B3E52800900D2F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		143CE02824B3E52800900D2F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -102,6 +105,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		141B40E924B6EC7E00A6D7D4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				141B40EB24B6ECB400A6D7D4 /* Post.h */,
+				141B40EC24B6ECB400A6D7D4 /* Post.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		141B40EA24B6EC8800A6D7D4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				14B5BD6024B7E92C00F18273 /* PostCell.h */,
+				14B5BD6124B7E92C00F18273 /* PostCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		143CE01B24B3E52800900D2F = {
 			isa = PBXGroup;
 			children = (
@@ -127,8 +148,8 @@
 		143CE02624B3E52800900D2F /* Instapict */ = {
 			isa = PBXGroup;
 			children = (
-				14D244FD24B522230007FEF9 /* Models */,
-				14D244FC24B5221D0007FEF9 /* Views */,
+				141B40E924B6EC7E00A6D7D4 /* Models */,
+				141B40EA24B6EC8800A6D7D4 /* Views */,
 				14D244FB24B522110007FEF9 /* View Controllers */,
 				143CE02724B3E52800900D2F /* AppDelegate.h */,
 				143CE02824B3E52800900D2F /* AppDelegate.m */,
@@ -172,20 +193,6 @@
 				14D2450524B58ADC0007FEF9 /* NewPostViewController.m */,
 			);
 			path = "View Controllers";
-			sourceTree = "<group>";
-		};
-		14D244FC24B5221D0007FEF9 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		14D244FD24B522230007FEF9 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		4729375231D77D854BC4FF9C /* Pods */ = {
@@ -455,6 +462,7 @@
 				14D2450624B58ADC0007FEF9 /* NewPostViewController.m in Sources */,
 				143CE02C24B3E52800900D2F /* SceneDelegate.m in Sources */,
 				14D2450324B527010007FEF9 /* TimelineViewController.m in Sources */,
+				141B40ED24B6ECB400A6D7D4 /* Post.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
