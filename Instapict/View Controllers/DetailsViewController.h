@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PostCell.h"
 #import "Post.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DetailsViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet PostCell *postCellView;
 @property (nonatomic, strong) Post *post;
 
 @end
