@@ -400,7 +400,7 @@
                                     <constraint firstAttribute="width" constant="350" id="I0W-SU-eNa"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Caption here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Tli-Ck-ZZZ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Tli-Ck-ZZZ">
                                 <rect key="frame" x="32" y="494" width="350" height="187"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
