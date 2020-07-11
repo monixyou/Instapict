@@ -41,6 +41,16 @@
     self.captionLabel.text = post.caption;
     self.numLikesLabel.text = [NSString stringWithFormat:@"%@", post.likeCount];
     self.usernameLabel.text = post.author.username;
+    
+    self.profilePicture.image = nil;
+    [post.author[@"profilePicture"] getDataInBackgroundWithBlock:^(NSData * _Nullable data, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"Error: %@", error.localizedDescription);
+        } else {
+            weakSelf.profilePicture.image = [UIImage imageWithData:data];
+        }
+    }];
+    NSLog(@"%@",self.profilePicture.image);
 }
 
 //-(void)postCell:(PostCell *)postCell getUser:(NSString *) userObjectId completion:(void(^)(void))completion;

@@ -10,14 +10,16 @@
 #import "PostCollectionCell.h"
 #import "Post.h"
 #import <Parse/Parse.h>
+#import <UIKit/UIKit.h>
 
-@interface ProfileViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface ProfileViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong, nonatomic) NSMutableArray<Post *> *recentPosts;
 
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *profilePicture;
+@property (strong, nonatomic) UIImage *postPhoto;
 
 @end
 
@@ -68,8 +70,92 @@
     }];
 }
 
-- (IBAction)didTapChangeProfilePicture:(id)sender {
+- (IBAction)didTapCamera:(id)sender {
+    UIImagePickerController *imagePickerVC = [UIImagePickerController new];
+    imagePickerVC.delegate = self;
+    imagePickerVC.allowsEditing = YES;
     
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        
+        imagePickerVC.sourceType = UIImagePickerControllerSourceTypeCamera;
+    }
+    else {
+        // TODO: change to alert instead
+        imagePickerVC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        NSLog(@"Camera 🚫 available so we will use photo library instead");
+    }
+    [self presentViewController:imagePickerVC animated:YES completion:nil];
+}
+
+- (IBAction)didTapGallery:(id)sender {
+    UIImagePickerController *imagePickerVC = [UIImagePickerController new];
+    imagePickerVC.delegate = self;
+    imagePickerVC.allowsEditing = YES;
+    imagePickerVC.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+
+    [self presentViewController:imagePickerVC animated:YES completion:nil];
+}
+
+- (UIImage *)resizeImage:(UIImage *)image withSize:(CGSize)size {
+    UIImageView *resizeImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height)];
+    
+    resizeImageView.contentMode = UIViewContentModeScaleAspectFill;
+    resizeImageView.image = image;
+    
+    UIGraphicsBeginImageContext(size);
+    [resizeImageView.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return newImage;
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+    
+    UIImage *editedImage = info[UIImagePickerControllerEditedImage];
+    
+    CGSize size = CGSizeMake(self.profilePicture.frame.size.width, self.profilePicture.frame.size.height);
+    self.postPhoto = [self resizeImage:editedImage withSize:size];
+    
+    [self uploadProfilePicture];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)uploadProfilePicture {
+    if (self.postPhoto == nil) {
+        // raise alert
+    }
+    else {
+        PFUser *user = [PFUser currentUser];
+        user[@"profilePicture"] = [self getPFFileFromImage:self.postPhoto];
+        
+        __weak __typeof(self) weakSelf = self;
+        [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+            if (error) {
+                NSLog(@"Error: %@", error.localizedDescription);
+            } else {
+                __strong __typeof(self) strongSelf = weakSelf;
+                [strongSelf.profilePicture setImage:strongSelf.postPhoto];
+            }
+        }];
+    }
+}
+
+- (PFFileObject *)getPFFileFromImage: (UIImage * _Nullable)image {
+    
+    // check if image is not nil
+    if (!image) {
+        return nil;
+    }
+    
+    NSData *imageData = UIImagePNGRepresentation(image);
+    // get image data and check if that is not nil
+    if (!imageData) {
+        return nil;
+    }
+    
+    return [PFFileObject fileObjectWithName:@"image.png" data:imageData];
 }
 
 

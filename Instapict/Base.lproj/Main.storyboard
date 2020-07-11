@@ -585,11 +585,18 @@
                         <viewLayoutGuide key="safeArea" id="YhT-ce-CZ2"/>
                     </view>
                     <navigationItem key="navigationItem" id="8kv-cx-ijg">
-                        <barButtonItem key="rightBarButtonItem" title="Change Profile Photo" id="2pp-mk-BAF">
-                            <connections>
-                                <action selector="didTapChangeProfilePicture:" destination="dno-sn-p5v" id="5xA-n5-lbS"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem image="photo.on.rectangle" catalog="system" id="9n4-aq-omR">
+                                <connections>
+                                    <action selector="didTapGallery:" destination="dno-sn-p5v" id="xMA-Xw-E8C"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Change Profile Photo" image="camera" catalog="system" id="2pp-mk-BAF">
+                                <connections>
+                                    <action selector="didTapCamera:" destination="dno-sn-p5v" id="7Da-IV-NPF"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="mWZ-GQ-RkQ" id="2gz-MX-Noq"/>
