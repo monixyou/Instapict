@@ -56,6 +56,10 @@
     }];
 }
 
+- (IBAction)onTap:(id)sender {
+    [self.view endEditing:YES];
+}
+
 /*
 #pragma mark - Navigation
 

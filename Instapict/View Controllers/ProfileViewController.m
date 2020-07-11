@@ -16,6 +16,9 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong, nonatomic) NSMutableArray<Post *> *recentPosts;
 
+@property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *profilePicture;
+
 @end
 
 @implementation ProfileViewController
@@ -26,7 +29,13 @@
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
     
+    self.profilePicture.layer.cornerRadius = self.profilePicture.frame.size.height /2;
+    self.profilePicture.layer.masksToBounds = YES;
+    self.profilePicture.layer.borderWidth = 0;
+    
     [self getRecentPosts];
+    
+    self.usernameLabel.text = [PFUser currentUser].username;
     
     UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *)self.collectionView.collectionViewLayout;
     
@@ -58,6 +67,11 @@
         }
     }];
 }
+
+- (IBAction)didTapChangeProfilePicture:(id)sender {
+    
+}
+
 
 #pragma mark - Collection View Delegate
 

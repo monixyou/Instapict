@@ -25,6 +25,10 @@
 - (void)setPost:(Post *)post {
     _post = post;
     
+    self.profilePicture.layer.cornerRadius = self.profilePicture.frame.size.height /2;
+    self.profilePicture.layer.masksToBounds = YES;
+    self.profilePicture.layer.borderWidth = 0;
+    
     __weak __typeof(self) weakSelf = self;
     [post.image getDataInBackgroundWithBlock:^(NSData * _Nullable data, NSError * _Nullable error) {
         if (error) {
@@ -35,7 +39,44 @@
     }];
     
     self.captionLabel.text = post.caption;
-    self.numLikesLabel.text = [NSString stringWithFormat:@"%@", post.likeCount];;
+    self.numLikesLabel.text = [NSString stringWithFormat:@"%@", post.likeCount];
+    self.usernameLabel.text = post.author.username;
+}
+
+//-(void)postCell:(PostCell *)postCell getUser:(NSString *) userObjectId completion:(void(^)(void))completion;
+//
+//
+//- (IBAction)getUsername:(id)sender {
+//
+//    [self.delegate postCell:self getUser:self.post.author.objectId completion:^(PFUser *user, NSError *error) {
+//        if (error) {
+//            NSLog(@"Error: %@", error.localizedDescription);
+//        }
+//        else {
+//            self.usernameLabel.text.
+//        }
+//    }];
+//
+//}
+
+-(NSString *)queryUsername:(NSString *)objectId {
+    __block NSString *username = @"";
+    NSLog(@"%@", objectId);
+    PFQuery *query = [PFUser query];
+    [query whereKey:@"objectId" equalTo:objectId];
+    [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error)
+    {
+        if (!error) {
+            //You found the user!
+            PFUser *queriedUser = (PFUser *)object;
+            username = queriedUser.username;
+        }
+        else {
+            NSLog(@"Error: %@", error.localizedDescription);
+        }
+    }];
+    NSLog(@"%@", username);
+    return username;
 }
 
 @end

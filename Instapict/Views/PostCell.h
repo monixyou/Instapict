@@ -13,6 +13,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+//@protocol PostCellDelegate
+//
+//-(void)postCell:(PostCell *)postCell getUser:(NSString *)userObjectId completion:(void (^)(PFUser *, NSError *))completion;
+//
+//@end
+
 @interface PostCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *profilePicture;
@@ -30,6 +36,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *createAtLabel;
 
 @property (nonatomic, strong) Post *post;
+
+//@property (nonatomic, weak) id<PostCellDelegate> delegate;
 
 @end
 

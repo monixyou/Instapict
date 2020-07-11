@@ -22,6 +22,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.captionTextView.layer.borderWidth = 1.0f;
+    self.captionTextView.layer.borderColor = [[UIColor grayColor] CGColor];
 }
 
 - (IBAction)didTapCamera:(id)sender {
@@ -100,6 +103,10 @@
 - (void)resetView {
     self.postPhoto.image = nil;
     self.captionTextView.text = @"";
+}
+
+- (IBAction)onTap:(id)sender {
+    [self.view endEditing:YES];
 }
 
 /*
