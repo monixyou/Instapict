@@ -8,6 +8,7 @@
 
 #import "PostCell.h"
 #import "Post.h"
+#import "DateTools.h"
 
 @implementation PostCell
 
@@ -41,6 +42,9 @@
     self.captionLabel.text = post.caption;
     self.numLikesLabel.text = [NSString stringWithFormat:@"%@", post.likeCount];
     self.usernameLabel.text = post.author.username;
+    
+    NSDate *createdAt = post.createdAt;
+    self.createAtLabel.text = createdAt.shortTimeAgoSinceNow;
     
     self.profilePicture.image = nil;
     [post.author[@"profilePicture"] getDataInBackgroundWithBlock:^(NSData * _Nullable data, NSError * _Nullable error) {
